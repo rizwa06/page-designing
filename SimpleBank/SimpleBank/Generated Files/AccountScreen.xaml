@@ -1,0 +1,111 @@
+﻿<Page
+    x:Class="SimpleBank.AccountScreen"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SimpleBank"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+
+    <Grid x:ConnectionId='1' x:Name="___no_name_" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Rectangle Grid.Row="0" Height="60" VerticalAlignment="Top" Margin="0">
+            <Rectangle.Fill>
+                <ImageBrush Stretch="Fill" ImageSource="header_texture.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock x:ConnectionId='2' x:Name="lab_UserName" HorizontalAlignment="Center" Margin="222,0,884,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontSize="36" Width="394" TextAlignment="Center" MaxWidth="394"/>
+        <Button x:ConnectionId='3' x:Name="bt_Logout" Content="Logout" HorizontalAlignment="Right" Margin="0,10,60,0" VerticalAlignment="Top" Height="35" Width="212"                        />
+        <Popup x:ConnectionId='4' x:Name="pbx_AddAccnt" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalOffset="-120" VerticalOffset="-40">
+            <Grid Background="#FFE5E5E5" Height="140" Width="240">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="0*"/>
+                </Grid.RowDefinitions>
+
+                <StackPanel>
+                    <Button x:ConnectionId='36' x:Name="bt_Close" Content="Close" Height="35" Width="240"                       />
+                    <Button x:ConnectionId='37' x:Name="bt_createStud" Content="Student" Height="35" Width="240"                            />
+                    <Button x:ConnectionId='38' x:Name="bt_createSave" Content="Savings" Height="35" Width="240"                            />
+                    <Button x:ConnectionId='39' x:Name="bt_createCurr" Content="Current" Height="35" Width="240"                            />
+                </StackPanel>
+            </Grid>
+        </Popup>
+        <Popup x:ConnectionId='5' x:Name="pbx_Transfer" HorizontalAlignment="Center" Height="Auto" VerticalAlignment="Center" HorizontalOffset="-120" VerticalOffset="-40">
+            <Grid x:ConnectionId='29' x:Name="grd_Transfer" Background="#FFE5E5E5" Height="Auto" Width="240">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="0*"/>
+                </Grid.RowDefinitions>
+
+                <StackPanel x:ConnectionId='30' x:Name="sp_TransferMain">
+                    <StackPanel x:ConnectionId='31' x:Name="sp_TransferList">
+
+                    </StackPanel>
+                    <TextBlock x:ConnectionId='32' x:Name="lab_TransAmount" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Transfer Amount:" VerticalAlignment="Top" FontSize="16"/>
+                    <TextBox x:ConnectionId='33' x:Name="tb_transAmount" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240" Height="50" FontSize="24" PlaceholderText="£0.00"/>
+                    <Button x:ConnectionId='34' x:Name="bt_TransAccept" Content="Accept" HorizontalAlignment="Left" VerticalAlignment="Top" Width="240" Height="50"                              />
+                    <Button x:ConnectionId='35' x:Name="bt_TransCancel" Content="Cancel" HorizontalAlignment="Left" VerticalAlignment="Top" Width="240" Height="50"                              />
+                </StackPanel>
+            </Grid>
+        </Popup>
+        <Popup x:ConnectionId='6' x:Name="pbx_MakePayment" HorizontalAlignment="Center" Height="Auto" VerticalAlignment="Center" HorizontalOffset="-120" VerticalOffset="-40">
+            <Grid x:ConnectionId='21' x:Name="grd_Payment" Background="#FFE5E5E5" Height="Auto" Width="240">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="0*"/>
+                </Grid.RowDefinitions>
+
+                <StackPanel x:ConnectionId='22' x:Name="sp_PaymentMain">
+                    <TextBlock x:ConnectionId='23' x:Name="lab_PaymentAccNum" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Account Number:" VerticalAlignment="Top" FontSize="16"/>
+                    <TextBox x:ConnectionId='24' x:Name="tb_PaymentAccNum" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240" Height="50" FontSize="24" PlaceholderText="000000"/>
+
+                    <TextBlock x:ConnectionId='25' x:Name="lab_PaymentAmount" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Transfer Amount:" VerticalAlignment="Top" FontSize="16"/>
+                    <TextBox x:ConnectionId='26' x:Name="tb_PaymentAmount" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240" Height="50" FontSize="24" PlaceholderText="£0.00"/>
+                    <Button x:ConnectionId='27' x:Name="bt_PaymentAccept" Content="Accept" HorizontalAlignment="Left" VerticalAlignment="Top" Width="240" Height="50"                                />
+                    <Button x:ConnectionId='28' x:Name="bt_PaymentCancel" Content="Cancel" HorizontalAlignment="Left" VerticalAlignment="Top" Width="240" Height="50"                                />
+                </StackPanel>
+            </Grid>
+        </Popup>
+        <StackPanel HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Orientation="Horizontal">
+            <StackPanel HorizontalAlignment="Left" Margin="0,0,0,2" VerticalAlignment="Center">
+                <StackPanel x:ConnectionId='19' x:Name="sp_AccountList" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" BorderThickness="2,2,2,2" BorderBrush="Red" MinHeight="550" MinWidth="400"/>
+                <Button x:ConnectionId='20' x:Name="bt_AddAccount" Content="Add Account" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Bottom" RenderTransformOrigin="-1.323,0.192" Height="60"                             FontSize="36" Width="401"/>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Left" Margin="30,0,0,0" VerticalAlignment="Center" Orientation="Vertical">
+                <StackPanel HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" Width="625" Orientation="Horizontal">
+                    <TextBlock x:ConnectionId='17' x:Name="lab_Balance" HorizontalAlignment="Left" Margin="10,0,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontSize="24"/>
+                    <TextBlock x:ConnectionId='18' x:Name="lab_AccNumber" HorizontalAlignment="Right" Margin="400,0,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="41" Width="104" FontSize="24"/>
+                </StackPanel>
+                <TextBlock x:ConnectionId='7' x:Name="lab_OverdraftLimit" HorizontalAlignment="Left" Margin="12,5,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontSize="16"/>
+                <RelativePanel Margin="0,10,0,0" HorizontalAlignment="Center" MinHeight="360" MinWidth="600">
+                    <StackPanel x:ConnectionId='14' x:Name="sp_ActivityLogLeft" HorizontalAlignment="Left" Height="360" Margin="0" Width="200" BorderBrush="Red" BorderThickness="2,2,0,2"/>
+                    <StackPanel x:ConnectionId='15' x:Name="sp_ActivityLogCen" RelativePanel.RightOf="sp_ActivityLogLeft" HorizontalAlignment="Left" Height="360" Margin="0" VerticalAlignment="Top" Width="200" BorderBrush="Red" BorderThickness="0,2"/>
+                    <StackPanel x:ConnectionId='16' x:Name="sp_ActivityLogRight" RelativePanel.RightOf="sp_ActivityLogCen" HorizontalAlignment="Left" Height="360" Margin="0" VerticalAlignment="Top" Width="200" BorderBrush="Red" BorderThickness="0,2,2,2"/>
+                </RelativePanel>
+                <StackPanel HorizontalAlignment="Center" Height="50" Margin="0,10,0,0" VerticalAlignment="Top" Orientation="Horizontal">
+                    <Button x:ConnectionId='12' x:Name="bt_MakePayment" Content="Make Payment" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" Height="50" Width="300"                             />
+                    <Button x:ConnectionId='13' x:Name="bt_Transfer" Content="Transfer" HorizontalAlignment="Right" Margin="10,0,0,0" VerticalAlignment="Top" Height="50" Width="300"                          />
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Center" Height="50" Margin="0,10,0,0" VerticalAlignment="Top" Orientation="Horizontal">
+                    <Button x:ConnectionId='10' x:Name="bt_Deposit" Content="Deposit" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" Width="250" Height="50"                         />
+                    <TextBox x:ConnectionId='11' x:Name="tb_Deposit" HorizontalAlignment="Left" Margin="10,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="350" Height="50" FontSize="24" PlaceholderText="£0.00" BorderBrush="{x:Null}" FocusVisualPrimaryBrush="{x:Null}" FocusVisualSecondaryBrush="{x:Null}" SelectionHighlightColor="{x:Null}" SelectionHighlightColorWhenNotFocused="{x:Null}">
+                        <TextBox.Background>
+                            <ImageBrush Stretch="Fill" ImageSource="text_back.jpg"/>
+                        </TextBox.Background>
+                    </TextBox>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Center" Height="50" Margin="0,10,0,0" VerticalAlignment="Top" Orientation="Horizontal" Padding="0">
+                    <Button x:ConnectionId='8' x:Name="bt_Withdraw" Content="Withdraw" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" Width="250" Height="50"                          />
+                    <TextBox x:ConnectionId='9' x:Name="tb_Withdraw" HorizontalAlignment="Left" Margin="10,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="350" Height="50" FontSize="24" PlaceholderText="£0.00" FocusVisualPrimaryBrush="{x:Null}" FocusVisualSecondaryBrush="{x:Null}" BorderBrush="{x:Null}" SelectionHighlightColor="{x:Null}" SelectionHighlightColorWhenNotFocused="{x:Null}">
+                        <TextBox.Background>
+                            <ImageBrush Stretch="Fill" ImageSource="text_back.jpg"/>
+                        </TextBox.Background>
+                    </TextBox>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+        <Rectangle Height="60" Fill="#FF4CAF50" Margin="0" VerticalAlignment="Bottom"/>
+    </Grid>
+</Page>
+

@@ -1,0 +1,40 @@
+﻿<Page
+    x:Class="SimpleBank.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SimpleBank"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+        <Grid Background="White" >
+            <Rectangle Grid.Row="0" Height="60" VerticalAlignment="Top" Margin="0">
+                <Rectangle.Fill>
+                    <ImageBrush Stretch="Fill" ImageSource="header_texture.png"/>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle FocusVisualPrimaryBrush="Black" Width="600" Height="328" Stroke="Black" Margin="0,150,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" StrokeThickness="3"></Rectangle>
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="Black" Background="{x:Null}" Margin="0,100">
+                <TextBlock x:Name="lab_title" HorizontalAlignment="Center" Text="Simple Bank" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="48" FontWeight="Normal" FocusVisualPrimaryBrush="#FF23B64F" Margin="0,0,0,100"/>
+                <TextBlock x:Name="lab_exp" HorizontalAlignment="Center" Margin="0" Text="Please enter your ID and password" TextWrapping="Wrap" VerticalAlignment="Center" Height="32" FontSize="22"/>
+                <StackPanel Orientation="Horizontal">
+                    <TextBox x:Name="tb_userid" HorizontalAlignment="Center" Text="" VerticalAlignment="Top" Width="400" PlaceholderText="User ID" TextChanged="tb_userid_TextChanged" InputScope="Digits" KeyDown="tb_userid_KeyDown" Margin="0,30,0,0" BorderBrush="{x:Null}" FocusVisualPrimaryBrush="{x:Null}" FocusVisualSecondaryBrush="{x:Null}" SelectionHighlightColor="{x:Null}" SelectionHighlightColorWhenNotFocused="{x:Null}">
+                        <TextBox.Background>
+                            <ImageBrush Stretch="Fill" ImageSource="text_back.jpg"/>
+                        </TextBox.Background>
+                    </TextBox>
+                    <TextBlock x:Name="lab_iderror" HorizontalAlignment="Center" Height="29" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Red" Margin="0,30,0,0" Width="80"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <PasswordBox x:Name="pb_password" HorizontalAlignment="Center" VerticalAlignment="Top" Width="400" PlaceholderText="Password" PasswordChanged="pb_password_PasswordChanged" Margin="0,30,0,0" FocusVisualPrimaryBrush="{x:Null}" FocusVisualSecondaryBrush="{x:Null}" BorderBrush="{x:Null}" SelectionHighlightColor="{x:Null}">
+                        <PasswordBox.Background>
+                            <ImageBrush Stretch="Fill" ImageSource="text_back.jpg"/>
+                        </PasswordBox.Background>
+                    </PasswordBox>
+                    <TextBlock x:Name="lab_passerror" HorizontalAlignment="Center" Height="29" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Foreground="Red" Margin="0,30,0,0"/>
+                </StackPanel>
+                <Button x:Name="bt_login" Content="LOGIN" HorizontalAlignment="Center" Margin="0,30,0,0" VerticalAlignment="Center" Width="150" Background="#33FFFFFF" BorderBrush="Black" RenderTransformOrigin="0.5,0.5" IsEnabled="False" Click="bt_login_Click" Height="60"/>
+            </StackPanel>
+        <Rectangle Height="60" Fill="#FF4CAF50" Margin="0" VerticalAlignment="Bottom"/>
+        </Grid>
+
+</Page>

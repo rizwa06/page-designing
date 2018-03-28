@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>ab8d3ab8-b6e9-4c15-8a51-df6b2af71cea</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>16a75c02-458c-4ea8-9ae9-33bfaa06c096</UniqueIdentifier>
+      <Extensions>bmp;fbx;gif;jpg;jpeg;tga;tiff;tif;png</Extensions>
+    </Filter>
+    <Filter Include="Core Classes">
+      <UniqueIdentifier>{0d5439a0-4c52-4ca2-be24-25bd2596463e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="XAML Pages">
+      <UniqueIdentifier>{d5b6cfff-dd79-4118-b791-8556a8ae21ef}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="App.xaml.cpp" />
+    <ClCompile Include="MainPage.xaml.cpp" />
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="AccountScreen.xaml.cpp" />
+    <ClCompile Include="BankProfile.cpp">
+      <Filter>Core Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="BankAccount.cpp">
+      <Filter>Core Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="Transactions.cpp">
+      <Filter>Core Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils.cpp">
+      <Filter>Core Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="Data.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="App.xaml.h" />
+    <ClInclude Include="MainPage.xaml.h" />
+    <ClInclude Include="AccountScreen.xaml.h" />
+    <ClInclude Include="BankProfile.h">
+      <Filter>Core Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="BankAccount.h">
+      <Filter>Core Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Data.h">
+      <Filter>Core Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Transactions.h">
+      <Filter>Core Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils.h">
+      <Filter>Core Classes</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\LockScreenLogo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Wide310x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="..\..\..\header_texture.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="..\..\..\text_back.jpg">
+      <Filter>Assets</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SimpleBank_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="MainPage.xaml">
+      <Filter>XAML Pages</Filter>
+    </Page>
+    <Page Include="AccountScreen.xaml">
+      <Filter>XAML Pages</Filter>
+    </Page>
+  </ItemGroup>
+</Project>
